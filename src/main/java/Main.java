@@ -44,10 +44,9 @@ public class Main {
                 list.clear();
 
                 // update values in Database
-                jedis.set("mininum", String.valueOf(min));
+                jedis.set("minimum", String.valueOf(min));
                 jedis.set("maximum", String.valueOf(max));
                 jedis.set("average", String.valueOf(average));
-                jedis.flushAll();
                 System.out.println("Minimum: " + jedis.get("minimum") +
                         ", Maximum: " + jedis.get("maximum") +
                         ", Average: " + jedis.get("average"));
